@@ -10,8 +10,8 @@ class HomeController extends GetxController{
   @override
   void onInit() {
     allproducts();
-//  getCategories(); 
-// getProductbyCategory();   
+ getCategories(); 
+getProductbyCategory();   
 super.onInit();
   }
   getCategories(){

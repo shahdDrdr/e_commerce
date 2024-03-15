@@ -3,6 +3,7 @@ import 'package:e_commerc/core/services/connectivity_serivce.dart';
 import 'package:e_commerc/core/translation/app_translation.dart';
 import 'package:e_commerc/ui/shared/utils.dart';
 import 'package:e_commerc/ui/views/splash_view/splash_view.dart';
+import 'package:e_commerc/ui/views/store_challenge/home_view/home_view.dart';
 import 'package:e_commerc/ui/views/store_challenge/main_view.dart';
 //import 'package:e_commerc/ui/views/catrs/carts_view.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           useMaterial3: true,
         ),
-        home:SplashView(),
+        home:MainView(),
       ),
     );
   }

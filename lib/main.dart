@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:e_commerc/app/my_app.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 Future<void>main() async {
   WidgetsFlutterBinding.ensureInitialized();
    //! Get.put(SharedPrefrenceRepository());

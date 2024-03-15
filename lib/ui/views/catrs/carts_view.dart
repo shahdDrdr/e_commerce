@@ -5,6 +5,7 @@
 import 'package:e_commerc/ui/shared/colors.dart';
 import 'package:e_commerc/ui/shared/custom_widget/custom_divider.dart';
 import 'package:e_commerc/ui/shared/custom_widget/custom_row.dart';
+import 'package:e_commerc/ui/shared/shared_widgets/custom_text.dart';
 import 'package:e_commerc/ui/shared/utils.dart';
 
 import 'package:e_commerc/ui/views/store_challenge/checkout_view/checkout_view.dart';
@@ -32,13 +33,9 @@ class _CartsViewState extends State<CartsView> {
             children: [
               Padding(
                 padding:  EdgeInsetsDirectional.only(start:screenWidth(25),end: screenWidth(1.6) ),
-                child: Text('Carts',
-                style: TextStyle(
-                  fontSize: screenWidth(18),
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black,
-                ),      
-                ),
+                child: CustomText(text: 'Carts',
+                styleType: TextStyleType.TITLE,
+                )
               ),
               InkWell(
                 onTap: (){
@@ -91,24 +88,20 @@ class _CartsViewState extends State<CartsView> {
                                          padding: EdgeInsetsDirectional.only(top: screenWidth(40),bottom: screenWidth(40)),
                                          child: Row(
                                            children: [
-                                             Text('Price:',
-                                             style: TextStyle(
-                                              color: Color.fromRGBO(69, 95, 185, 1),
-                                               fontSize: screenWidth(28)
-                                             ),
-                                             ),
+                                            CustomText(text: 'Price:',
+                                            styleType: TextStyleType.FOCUSTEXT,
+                                            fontSize: screenWidth(28),
+                                            ),
                                              Text('${cart.cartList[index].productModel?.price}'),
                                            ],
                                          ),
                                        ),
                                          Row(
                                          children: [
-                                           Text('Total:',
-                                           style: TextStyle(
-                                            color: Color.fromRGBO(69, 95, 185, 1),
-                                             fontSize: screenWidth(28)
-                                           ),
-                                           ),
+                                            CustomText(text: 'Total:',
+                                            styleType: TextStyleType.FOCUSTEXT,
+                                            fontSize: screenWidth(28),
+                                            ),
                                            Text('${cart.cartList[index].totals}'),
                                          ],
                                        ),
@@ -119,7 +112,6 @@ class _CartsViewState extends State<CartsView> {
                                       InkWell(
                                         onTap: (){
                                           cart.changeQty(model: cart.cartList[index], incress: true);
-                                 
                                         },
                                         child: Icon(Icons.add_circle,
                                         color:Color.fromRGBO(69, 95, 185, 1) ,
@@ -135,8 +127,8 @@ class _CartsViewState extends State<CartsView> {
                                            cart.changeQty(model: cart.cartList[index], incress: false);
                                         },
                                         child: Icon(Icons.remove_circle,
-                                                                           color: Color.fromRGBO(69, 95, 185, 1),
-                                                                           size: screenWidth(20),
+                                                        color: Color.fromRGBO(69, 95, 185, 1),
+                                                         size: screenWidth(20),
                                         ),
                                       )
                                     ],),
@@ -196,18 +188,18 @@ class _CartsViewState extends State<CartsView> {
                                       borderRadius: BorderRadius.circular(25),
                                       color: Color.fromRGBO(69, 95, 185, 1),
                                     ),
-                                    child: Text('Placed Order',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize:screenWidth(18) 
-                                    ),
-                                    ),
+                                    child: 
+                                    CustomText(text: 'Placed Order',
+                                    styleType: TextStyleType.BUTTON,
+                                    fontSize: screenWidth(18),
+                                    )
+                                   
                                   ),
                       ),
         ]),
       ),
         ),
-      );
+    );
     
     
   }

@@ -1,6 +1,7 @@
 import 'package:e_commerc/ui/shared/colors.dart';
 import 'package:e_commerc/ui/shared/custom_widget/custom_divider.dart';
 import 'package:e_commerc/ui/shared/custom_widget/custom_row.dart';
+import 'package:e_commerc/ui/shared/shared_widgets/custom_text.dart';
 import 'package:e_commerc/ui/shared/utils.dart';
 
 import 'package:e_commerc/ui/views/store_challenge/main_view.dart';
@@ -59,12 +60,12 @@ class _CheckoutViewState extends State<CheckoutView> {
                                                      borderRadius: BorderRadius.circular(25),
                                                       color: Color.fromRGBO(69, 95, 185, 1),
                                                                                   ),
-                                                     child: Text('Continue Shopping',
-                                                        style: TextStyle(
-                                                         color: Colors.white,
-                                                          fontSize:screenWidth(22) 
-                                                        ),
-                                                        ),
+                                                     child: 
+                                                     CustomText(text: 'Continue Shopping',
+                                                     styleType: TextStyleType.BUTTON,
+                                                     fontSize: screenWidth(22),
+                                                     )
+                                                  
                                                     ),
                                                  ),
                                                ),

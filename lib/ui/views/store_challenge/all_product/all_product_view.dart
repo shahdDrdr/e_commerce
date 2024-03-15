@@ -1,4 +1,5 @@
 
+import 'package:e_commerc/ui/shared/shared_widgets/custom_text.dart';
 import 'package:e_commerc/ui/shared/utils.dart';
 import 'package:e_commerc/ui/views/store_challenge/all_product/all_product_controller.dart';
 import 'package:e_commerc/ui/views/store_challenge/product_details_view/product_details_view.dart';
@@ -30,11 +31,10 @@ class _AllProductChallengeState extends State<AllProductChallenge> {
           children: [
           Align(
             alignment: Alignment.topLeft,
-            child: Text('All Products',
-            style: TextStyle(
-              fontSize: screenWidth(15),fontWeight: FontWeight.bold
-            ),
-            ),
+            child:CustomText(text: 'All Products',
+               styleType: TextStyleType.TITLE,
+               )
+         
           ),
           Obx(() {
             return  
@@ -93,7 +93,6 @@ class _AllProductChallengeState extends State<AllProductChallenge> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Image.network(controller.result[index].image??"",
-                      //product.allproduct[index].image??'',
                     width: screenWidth(8),  
                           height: screenWidth(6),
                     ),
@@ -106,11 +105,9 @@ class _AllProductChallengeState extends State<AllProductChallenge> {
                       ),
                     ),Row(
                       children: [
-                         Text('price:',
-                         style: TextStyle(
-                          color: Colors.blue
-                         ),
-                         ),
+                        CustomText(text: 'price',
+                        styleType: TextStyleType.FOCUSTEXT,
+                        ),
                     Text('${controller.result[index].price??""}')
                       ],
                     )

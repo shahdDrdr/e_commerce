@@ -55,9 +55,9 @@ dependencies:
   google_maps_flutter: ^2.5.2
   firebase_core: ^2.13.0
   firebase_messaging: ^14.6.1
-  custom_refresh_indicator: ^3.0.0
   shimmer: ^3.0.0
   like_button: ^2.0.5
+  pull_to_refresh_flutter3: ^2.0.2
 
 dev_dependencies:
   flutter_test:

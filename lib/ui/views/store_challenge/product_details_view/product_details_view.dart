@@ -1,5 +1,6 @@
 
 import 'package:e_commerc/core/data/models/product_info.dart';
+import 'package:e_commerc/ui/shared/shared_widgets/custom_text.dart';
 
 import 'package:e_commerc/ui/shared/utils.dart';
 import 'package:e_commerc/ui/views/catrs/carts_view.dart';
@@ -26,12 +27,11 @@ ProductController controller=Get.put(ProductController());
     Padding(
       padding: EdgeInsetsDirectional.only(start: screenWidth(15),top: screenWidth(15)),
       child: ListView(children: [
-        Text(widget.products?.title??"",
-        style: TextStyle(
-          fontSize: screenWidth(21),
-          fontWeight:FontWeight.bold,
-          height: 2
-        ),
+        CustomText(text: widget.products?.title??"",
+        styleType: TextStyleType.BODY,
+        fontSize: screenWidth(21),
+        fontWeight: FontWeight.bold,
+        height: 2,
         ),
         Padding(
           padding: EdgeInsetsDirectional.only(top: screenWidth(20),bottom: screenWidth(22)),
@@ -43,13 +43,11 @@ ProductController controller=Get.put(ProductController());
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-         Text('Descripition:',
-          style: TextStyle(
-            color: Color.fromRGBO(69, 95, 185, 1),
-            fontSize: 20,
-            fontWeight: FontWeight.bold
-          ), 
-          ),
+            CustomText(text: 'Descripition',
+            styleType: TextStyleType.FOCUSTEXT,
+            fontSize: screenWidth(20),
+            fontWeight: FontWeight.bold,
+            ),
           Padding(
             padding: EdgeInsetsDirectional.only(end: screenWidth(25)),
             child: RatingBar.builder(
@@ -78,24 +76,21 @@ ProductController controller=Get.put(ProductController());
         Padding(
           padding:EdgeInsetsDirectional.only(top: screenWidth(15),bottom: screenWidth(20)),
           child: Row(children: [
-            Text('Category:',
-            style: TextStyle(
-              color: Color.fromRGBO(69, 95, 185, 1),
-              fontSize: 20,
-                 fontWeight: FontWeight.bold
-            ), 
+            CustomText(text: 'Category',
+            styleType: TextStyleType.FOCUSTEXT,
+            fontSize: screenWidth(20),
+            fontWeight: FontWeight.bold,
             ),
              Text(widget.products?.category??''),
           ],),
         ),
           Row(children: [
-          Text('Price:',
-          style: TextStyle(
-            color: Color.fromRGBO(69, 95, 185, 1),
-            fontSize: 20,
-               fontWeight: FontWeight.bold
-          ), 
-          ),
+             CustomText(text: 'Price',
+            styleType: TextStyleType.FOCUSTEXT,
+            fontSize: screenWidth(20),
+            fontWeight: FontWeight.bold,
+            ),
+       
            Text('${widget.products?.price??''}'),
         ],),
         Row(
@@ -114,12 +109,11 @@ ProductController controller=Get.put(ProductController());
                 borderRadius: BorderRadius.circular(25),
                 color: Color.fromRGBO(69, 95, 185, 1),
               ),
-              child: Text('Add To Cart',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize:screenWidth(22) 
-              ),
-              ),
+              child: 
+              CustomText(text: 'Add To Cart',
+              styleType: TextStyleType.BUTTON,
+              fontSize: screenWidth(22),
+              )
             ),
           ),
           Obx(() {
